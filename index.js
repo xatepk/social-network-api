@@ -16,11 +16,7 @@ console.log(process.env.MONGO_URL);
 
 const app = express();
 
-app.use(
-  cors({
-    origin: ["http://localhost:3000", process.env.ORIGIN],
-  })
-);
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(fileUpload({}));
