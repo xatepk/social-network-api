@@ -28,7 +28,7 @@ const postNews = (req, res, next) => {
   let image = '';
   if (Object.prototype.hasOwnProperty.call(req, 'files')) {
     const file = req.files.file;
-    image = Uuid.v4() + ".jpg"
+    image = Uuid.v4() + ".jpg";
     file.mv(path.resolve(`${STATIC_PATH}/${image}`));
   }
 
